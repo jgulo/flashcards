@@ -1,1 +1,1 @@
-{"question":"What time is it?","answer":"8:00AM"};
+["What time is it?","8:00AM"];["Where are you?","Jersey City"];["who died in lost?","everyone"];

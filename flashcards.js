@@ -50,18 +50,10 @@ function add(){
 		},
 
 	]).then(function(card){
-		var newCard = new flashcard(card.addQuestion,card.addAnswer);
-		var jsonCard = JSON.stringify(newCard);
-		// fs.appendFile("flashcards.txt", " [" + card.addQuestion + "," + card.addAnswer + "],", function(err) {
-		// 	if (err) {
-		// 	  console.log(err);
-		// 	}
-		// 	else {
-		// 	    console.log("You added a new flashcard!");
-		// 	}	
-		// });
-
-		fs.appendFile("flashcards.txt", jsonCard + ",", function(err) {
+		var cardArray = [card.addQuestion, card.addAnswer];
+		var jsonCard = JSON.stringify(cardArray);
+		
+		fs.appendFile("flashcards.txt", jsonCard + ";", function(err) {
 			if (err) {
 			  console.log(err);
 			}
@@ -79,13 +71,9 @@ function review(){
 	fs.readFile("flashcards.txt", "utf8", function(err, data) {
 
 	var amtCards = data.split(";");
-	console.log(amtCards)
-	console.log(amtCards.length)
-	console.log(amtCards[0])
-
-	var cardOne = JSON.parse(amtCards[0]);
-	console.log(cardOne.printfront)
-
+	var card = JSON.parse(amtCards[1]);
+	var newCard = new flashcard(card[0],card[1]);
+	console.log(newCard)
 
 
 	});
