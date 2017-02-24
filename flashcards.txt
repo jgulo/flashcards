@@ -1,1 +1,1 @@
-["What time is it?","8:00AM"];["Where are you?","Jersey City"];["who died in lost?","everyone"];
+["What time is it?","8:00AM"];["Where are you?","Jersey City"];["who died in lost?","everyone"];["Where is class?","HCC"];

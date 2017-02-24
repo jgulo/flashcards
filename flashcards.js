@@ -73,8 +73,9 @@ function review(){
 	var amtCards = data.split(";");
 	var card = JSON.parse(amtCards[1]);
 	var newCard = new flashcard(card[0],card[1]);
-	console.log(newCard)
+	console.log(newCard.question);
 
+	
 
 	});
 };
